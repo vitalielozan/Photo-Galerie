@@ -12,7 +12,7 @@ export default class SinglePhoto {
             <div class="row">
                 <div class="col col-xs-8 col-md-8">
                     <figure class="figure">
-                        <img src="${this.props.srcImage}" class="figure-img img-fluid rounded" alt="img buterflay" width="100%">
+                        <img src="${this.props.srcImage}" alt="${this.props.title}" class="figure-img img-fluid rounded" alt="img buterflay" width="100%">
                     </figure>
                 </div>
                 <div class="col-md-3 offset-md-1 col-xs-3 offset-xs-1">

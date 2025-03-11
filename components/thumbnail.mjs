@@ -20,7 +20,7 @@ export default class Thumbnail {
     return `
         <div class="thumbnail">
             <figure class="figure">
-                <img src="${this.props.srcThumbnail}" class="rounded" height="130" alt="fluture">
+                <img src="${this.props.srcThumbnail}" alt="${this.props.title}" class="rounded" height="130" alt="fluture">
                 <figcaption class="figure-caption">
                         <h4>${this.props.title}</h4>
                         <p>${this.props.shortDesc}</p>

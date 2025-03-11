@@ -26,8 +26,13 @@ class App {
   componentToRender(state) {
     if (state === null || state.link === "/") {
       return new PhotoGrid(this.data).render();
-    } else if (state.link.includes("/single-photo?id")) {
-      const singlePhotoData = this.data.find(d => d.id === Number(state.link.split("=")[1]));
+    }
+    const urlParams = new URLSearchParams(state.link.split("?")[1]);
+    const id = urlParams.get("id");
+
+    if (state.link.startsWith("/single-photo") && id) {
+      const singlePhotoData = this.data.find((d) => d.id === Number(id));
+
       if (singlePhotoData) {
         return new SinglePhoto(singlePhotoData).render();
       }
